@@ -1,0 +1,3 @@
+oh my zsh
+linux 命令
+1.ctrl F 往下翻页 ctrl B 网上翻页 shift G 最后一行 2.创建文件 touch test.txt 打开文件 cat test.txt 复制 cp test.txt test1.txt 改名字：mv test1.txt test2.txt 删除 rm test1.txt

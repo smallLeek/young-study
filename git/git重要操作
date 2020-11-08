@@ -11,3 +11,5 @@ git stash apply
 git stash clear
 
 git ls-files -s
+
+git add 先到版本库 再到暂存区

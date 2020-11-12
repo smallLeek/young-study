@@ -1,0 +1,7 @@
+1.setup
+
+vue2的生命周期
+
+beforeDestroy => beforeUnmount
+
+destroyed => unmounted

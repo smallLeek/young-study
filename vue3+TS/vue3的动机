@@ -1,0 +1,26 @@
+Mixin的解决方案
+
+const filterMixin = {
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+
+  }
+}
+const paginationMixin = {
+  data() {
+    return {}
+  },
+  methods: {
+
+  }
+}
+
+export default {
+  mixins: [filterMixin, paginationMixin]
+}
+
+vue2对typescript的支持

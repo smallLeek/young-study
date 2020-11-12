@@ -1,0 +1,6 @@
+eslint 不生效
+
+.vscode 
+{
+  "eslint.validate": ["typescript"]
+}

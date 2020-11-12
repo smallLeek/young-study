@@ -1,0 +1,14 @@
+watch
+
+const data = ref('')
+const updateData = ()=> {
+  data.value += 'Hello!'
+}
+watch(data, (newValue, oldValue) => {
+  document.title = 'updated' + data.value
+})
+
+return {
+  data,
+  updateData
+}

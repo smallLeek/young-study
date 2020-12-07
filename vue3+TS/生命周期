@@ -5,3 +5,11 @@ vue2的生命周期
 beforeDestroy => beforeUnmount
 
 destroyed => unmounted
+
+
+
+onMounted
+
+
+onRenderTracked
+onRenderTriggered

@@ -2,3 +2,82 @@
 （1）打包大小减少41%
 （2）初次渲染快55%，更新快133%
 （3）内存使用减少54%
+
+
+
+Compiler原理篇
+
+
+优化案例1:
+1.静态Node不再做更新处理（hoistStatic -> SSR优化）
+2.静态绑定的class，id不再做更新处理
+3.结合打包编辑PathFlag，进行跟新分析（动态绑定）
+
+优化案例2:
+1.事件监听器Cache缓存处理（cacheHandlers）
+2.hoistStatic自动针对多静态节点进行优化，输出字符串
+
+
+
+看了这个视频发现了新大陆, Vue 在线演示编译结果
+Vue3: https://vue-next-template-explorer.netlify.app/
+
+
+性能提升：1.3 ～ 2x
+
+TS支持，新增：Fragment 、Teleport、Suspense
+
+
+Fragment：不受根节点限制，渲染函数可接收Array
+Teleport 类似Protal，随用随取，比如：弹窗，Actions
+Suspense：嵌套的异步依赖，  async setup
+
+
+按需加载（配合vite） 组合API
+
+
+vue3的变化
+组合式API + 函数式编程
+
+组件间逻辑共享
+
+
+响应式API
+
+reactive
+
+ref
+
+computed
+
+readonly
+
+watchEffect
+
+watch
+
+
+const state = reactive ( {
+  num1: 0,
+  num2: 0,
+  result: 0 
+})
+
+function add () {
+  state.result = state.num1 + state.num2
+}
+
+
+computed使用：
+const state = reactive ( {
+  num1: 0,
+  num2: 0,
+  result: computed( () => state.num1 + state.num2)
+})
+
+
+setup(props, {emit}) {
+  
+}
+
+子组件像父组件传递直接用这个emit
